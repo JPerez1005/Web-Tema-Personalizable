@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Make Website with Video Background</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">Logo</a>
+        <!-- Botones -->
+        <div class="righSide">
+            <div class="btns dayNight">
+                <ion-icon name="moon-outline"></ion-icon>
+                <ion-icon name="sunny-outline"></ion-icon>
+            </div>
+            <div class="btns menuToggle">
+                <ion-icon name="menu-outline"></ion-icon>
+                <ion-icon name="close-outline"></ion-icon>
+            </div>
+        </div>
+    </header>
+    <!-- Video -->
+    <section class="main">
+        <!-- <video src="Assets/videoPlaya.mp4" autoplay loop muted type="mp4"></video> -->
+        <img id="Tanji" src="Assets/lugar.jfif" alt="Animacion">
+        <img src="Assets/mask.jpg" class="mask">
+        <h2>Ocean</h2>
+        <ul class="sci">
+            <li><a href="#"><ion-icon name="logo-facebook"></ion-icon></a></li>
+            <li><a href="#"><ion-icon name="logo-twitter"></ion-icon></a></li>
+            <li><a href="#"><ion-icon name="logo-instagram"></ion-icon></a></li>
+        </ul>
+    </section>
+
+    <!-- Navegación -->
+    <ul class="navigation">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Package</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+
+    <!-- Script para los iconos  -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <!-- Script para los botones -->
+    <script>
+        const d=document;
+        const dayNight=d.querySelector('.dayNight')
+        const menuToggle=d.querySelector('.menuToggle')
+        const body=d.querySelector('body')
+
+        const navigation=d.querySelector('.navigation')
+        // funcion de focus para el boton nocturno
+        dayNight.onclick=function(){
+            body.classList.toggle('dark')
+            dayNight.classList.toggle('active')
+        }
+
+        // funcion de focus para el boton del menu
+        menuToggle.onclick=function(){
+            // cambiamos de forma el boton en modo focus
+            menuToggle.classList.toggle('active')
+            // funcionamiento del menu en focus
+            navigation.classList.toggle('active')
+        }
+    </script>
+</body>
+</html>
